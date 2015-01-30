@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/about">
+        <file>wrench.png</file>
+        <file>restore.png</file>
+        <file>radio_off.png</file>
+        <file>radio_on.png</file>
+        <file>logo.svg</file>
+    </qresource>
+</RCC>

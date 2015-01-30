@@ -1,0 +1,52 @@
+﻿Build started 2015-01-30 15:32:38.
+     1>Project "C:\Users\stluor1\Documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\projects\VC9\SOIL.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\image_DXT.c ..\..\src\image_helper.c ..\..\src\SOIL.c ..\..\src\stb_image_aug.c
+         image_DXT.c
+     1>..\..\src\image_DXT.c(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+         image_helper.c
+     1>..\..\src\image_helper.c(325): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\src\image_helper.c(366): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\src\image_helper.c(373): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\src\image_helper.c(415): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\src\image_helper.c(422): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         SOIL.c
+         stb_image_aug.c
+     1>..\..\src\stb_image_aug.c(177): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(251): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(303): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(1557): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(2394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(2709): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(2995): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(3209): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(3548): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>..\..\src\stb_image_aug.c(3644): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\stluor1\documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\src\stbi_DDS_aug_c.h(362): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\stluor1\documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\src\stbi_DDS_aug_c.h(366): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\stluor1\documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\src\stbi_DDS_aug_c.h(390): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\stluor1\documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\src\stbi_DDS_aug_c.h(427): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\stluor1\documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\src\stbi_DDS_aug_c.h(498): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : see declaration of 'fopen'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\stluor1\Documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\Release\SOIL.lib" /NOLOGO /LTCG Release\image_DXT.obj
+         Release\image_helper.obj
+         Release\SOIL.obj
+         Release\stb_image_aug.obj
+         SOIL.vcxproj -> C:\Users\stluor1\Documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\Release\SOIL.lib
+     1>Done Building Project "C:\Users\stluor1\Documents\programming\channel_shuffle_gui\channel_shuffle_vs2013\soil\projects\VC9\SOIL.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.11

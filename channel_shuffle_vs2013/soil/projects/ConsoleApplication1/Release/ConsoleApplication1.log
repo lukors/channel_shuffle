@@ -1,0 +1,25 @@
+﻿Build started 2015-01-09 17:45:59.
+     1>Project "C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\ConsoleApplication1\ConsoleApplication1.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication1.cpp stdafx.cpp
+         ConsoleApplication1.cpp
+         stdafx.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\VC9\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\VC9\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:NOICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\VC9\Release\ConsoleApplication1.lib" /MACHINE:X86 /SAFESEH Release\ConsoleApplication1.obj
+         Release\stdafx.obj
+         "C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\VC9\Release\SOIL.lib"
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glDeleteTextures@8
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glBindTexture@8
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glTexImage2D@36
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glGetString@4
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glTexParameteri@12
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glReadPixels@28
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__wglGetProcAddress@4
+     1>SOIL.lib(SOIL.obj) : error LNK2001: unresolved external symbol __imp__glGenTextures@8
+     1>C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\VC9\Release\ConsoleApplication1.exe : fatal error LNK1120: 9 unresolved externals
+     1>Done Building Project "C:\Users\stluor1\Documents\programming\Simple OpenGL Image Library\projects\ConsoleApplication1\ConsoleApplication1.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.28
