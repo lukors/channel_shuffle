@@ -30,3 +30,5 @@ DISTFILES +=
 
 RESOURCES += \
     channel_shuffle_gui.qrc
+
+RC_FILE = channel_shuffle_gui.rc
