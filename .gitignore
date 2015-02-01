@@ -28,8 +28,7 @@
 *.app
 
 # Build directories
-build_release/
-build_debug/
+build/
 
 # Qt user files
 *.user*
