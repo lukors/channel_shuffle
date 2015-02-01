@@ -32,7 +32,7 @@
    <string>Channel Shuffle</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="gui.qrc">
+   <iconset resource="channel_shuffle_gui.qrc">
     <normaloff>:/about/logo.svg</normaloff>:/about/logo.svg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -203,7 +203,7 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="gui.qrc">
+           <iconset resource="channel_shuffle_gui.qrc">
             <normaloff>:/about/wrench.png</normaloff>:/about/wrench.png</iconset>
           </property>
           <property name="arrowType">
@@ -270,7 +270,7 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="gui.qrc">
+           <iconset resource="channel_shuffle_gui.qrc">
             <normaloff>:/about/restore.png</normaloff>:/about/restore.png</iconset>
           </property>
          </widget>
@@ -1337,7 +1337,7 @@
      <x>0</x>
      <y>0</y>
      <width>515</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -1386,7 +1386,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="gui.qrc"/>
+  <include location="channel_shuffle_gui.qrc"/>
  </resources>
  <connections>
   <connection>
