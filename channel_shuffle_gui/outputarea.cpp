@@ -48,6 +48,13 @@ void OutputArea::setFinalCommand(QString command = Q_NULLPTR, QString format = Q
     }
 }
 
+QString OutputArea::getFinalCommand()
+{
+    QString finalOutFileName = *fileName + "." + *outFormat;
+    QString finalOutFilePath = QDir::tempPath() + "\\channel_shuffle\\" + finalOutFileName;
+    return QString(*finalCommand + " \"" + finalOutFilePath + "\" " + *flags);
+}
+
 void OutputArea::updatePreview(QString fileName)
 {
     *tempPath = QDir::tempPath() + "\\channel_shuffle\\" + fileName;

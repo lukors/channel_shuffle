@@ -1344,6 +1344,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionCopy_command_to_clipboard"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -1364,6 +1365,14 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCopy_command_to_clipboard">
+   <property name="text">
+    <string>Copy command</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
    </property>
   </action>
   <action name="actionAbout">

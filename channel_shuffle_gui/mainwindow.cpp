@@ -36,6 +36,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
 
+    connect(ui->actionCopy_command_to_clipboard, SIGNAL(triggered()), this, SLOT(copyCommandToClipboard()));
+
     // SET DEFAULT IMAGES
     QMimeData* mimeData = new QMimeData();
     QList<QUrl>* urlList = new QList<QUrl>();
@@ -570,6 +572,12 @@ void MainWindow::openAboutWindow()
 {
     aboutWindow = new About();
     aboutWindow->show();
+}
+
+void MainWindow::copyCommandToClipboard()
+{
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(ui->output->getFinalCommand());
 }
 
 MainWindow::~MainWindow()

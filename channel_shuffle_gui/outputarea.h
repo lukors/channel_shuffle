@@ -17,6 +17,7 @@ public:
     void setCommand(QString command, QString flags);
     void setFinalCommand(QString command, QString format);
     void runCommand(QString fileName, bool final);
+    QString getFinalCommand();
 
 private slots:
     void previewCompleteTGA();

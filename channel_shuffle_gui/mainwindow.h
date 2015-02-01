@@ -7,6 +7,7 @@
 #include "QDrag"
 #include "QMimeData"
 #include "QDir"
+#include "QClipboard"
 #include "about.h"
 
 namespace Ui {
@@ -24,6 +25,7 @@ public:
 public slots:
     void updateOutput();
     void openAboutWindow();
+    void copyCommandToClipboard();
     void updateFileType();
     void hotkeyRed();
     void hotkeyGreen();
