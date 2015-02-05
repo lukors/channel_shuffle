@@ -86,6 +86,11 @@ void OutputArea::previewCompleteTGA()
     process->start(program);
     connect(process, SIGNAL(finished(int)), this, SLOT(previewCompleteBMP()));
 
+    QFile::remove(*tempPath + "_r.bmp");
+    QFile::remove(*tempPath + "_g.bmp");
+    QFile::remove(*tempPath + "_b.bmp");
+    QFile::remove(*tempPath + "_a.bmp");
+
     // CREATE R, G, B & A PREVIEWS
     QProcess *processR = new QProcess(this);
     processR->start("channel_shuffle \"" + *tempPath + ".tga\" \"" + *tempPath + "_r.bmp\" -r 1r -g 1r -b 1r");
