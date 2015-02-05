@@ -71,6 +71,7 @@ void DropArea::dropEvent(QDropEvent *event)
 
 void DropArea::previewComplete(int exitStatus)
 {
+    emit(changed());
     if(exitStatus == 0)
     {
         // STORE ORIGINAL
@@ -100,7 +101,21 @@ void DropArea::previewComplete(int exitStatus)
         *originalFile = "no_image_preview.tga";
         setPixmap(*new QPixmap());
         clear();
-        emit(changed());
+
+        QMessageBox msgBox;
+        msgBox.setIcon(QMessageBox::Warning);
+        msgBox.setText("Unsupported file format");
+        msgBox.setInformativeText("Supported types: bmp, dds, hdr, jpg, png, psd & tga.\n\nPress \"Show details...\" below for more specific format compatibility.");
+        msgBox.setDetailedText(
+"Readable Image Formats:\n\n\
+BMP - non-1bpp, non-RLE (from stb_image documentation)\n\n\
+DDS - DXT1/2/3/4/5, uncompressed, cubemaps (can't read 3D DDS files yet)\n\n\
+HDR - converted to LDR, unless loaded with *HDR* functions (RGBE or RGBdivA or RGBdivA2)\n\n\
+JPG - JPEG baseline (from stb_image documentation)\n\n\
+PNG - non-interlaced (from stb_image documentation)\n\n\
+PSD - (from stb_image documentation)\n\n\
+TGA - greyscale or RGB or RGBA or indexed, uncompressed or RLE");
+        msgBox.exec();
     }
 }
 

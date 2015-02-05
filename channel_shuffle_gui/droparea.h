@@ -3,6 +3,7 @@
 
 #include <QLabel>
 #include <QFile>
+#include "qmessagebox.h"
 
 QT_BEGIN_NAMESPACE
 class QMimeData;
