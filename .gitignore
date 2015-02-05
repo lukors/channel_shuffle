@@ -29,6 +29,15 @@
 
 # Build directories
 build/
+channel_shuffle_vs2013/channel_shuffle/Release/
+channel_shuffle_vs2013/channel_shuffle/Debug/
+channel_shuffle_vs2013/soil/projects/VC9/Release/
+channel_shuffle_vs2013/soil/projects/VC9/Debug/
 
 # Qt user files
 *.user*
+*.opensdf
+*.sdf
+
+# Visual Studio files
+*.pdb
