@@ -15,6 +15,7 @@ DropArea::DropArea(QWidget *parent)
     setAutoFillBackground(true);
     outPath = new QString("no_image");
     originalFile = new QString("no_image_preview.tga");
+    inputPath = new QString();
     activePreview = new int;
     *activePreview = 0;
     clearText = new QString("Drop an image here");
@@ -42,11 +43,10 @@ void DropArea::dropEvent(QDropEvent *event)
 
     if (mimeData->hasUrls()) {
         QList<QUrl> urlList = mimeData->urls();
-        QString inputPath;
         for (int i = 0; i < urlList.size() && i < 32; ++i) {
             QString url = urlList.at(i).path();
-            inputPath = url;
-            while(inputPath[0] == '\\' || inputPath[0] == '/') inputPath = inputPath.remove(0, 1);
+            *inputPath = url;
+            while(inputPath->at(0) == '\\' || inputPath->at(0) == '/') *inputPath = inputPath->remove(0, 1);
         }
         *clearText = "Loading image...";
         clear();
@@ -58,23 +58,10 @@ void DropArea::dropEvent(QDropEvent *event)
         // MAKE PREVIEW
         QFile::remove(*outPath + "_preview.tga");
         QProcess *process = new QProcess(this);
-        QString program = "channel_shuffle \"" + inputPath + "\" \"" + *outPath + "_preview.tga\" -width 256 -height 256 -r 1r -g 1g -b 1b -a 1a";
+        QString program = "channel_shuffle \"" + *inputPath + "\" \"" + *outPath + "_preview.tga\" -width 256 -height 256 -r 1r -g 1g -b 1b -a 1a";
         process->start(program);
         connect(process, SIGNAL(finished(int)), this, SLOT(previewComplete(int)));
 
-        // STORE ORIGINAL
-        QFile *inputFile = new QFile(inputPath);
-        QString suffix = QFileInfo(*inputFile).suffix();
-        QString originalFilePath = *outPath + "_original." + suffix;
-        QFile::remove(originalFilePath);
-        if(QFile::copy(inputPath, originalFilePath))
-        {
-            *originalFile = originalFilePath;
-        }
-        else
-        {
-            setText("ERROR: Unable to\ncopy original file\nto temp directory");
-        }
         activateWindow();
     }
 
@@ -86,6 +73,20 @@ void DropArea::previewComplete(int exitStatus)
 {
     if(exitStatus == 0)
     {
+        // STORE ORIGINAL
+        QFile *inputFile = new QFile(*inputPath);
+        QString suffix = QFileInfo(*inputFile).suffix();
+        QString originalFilePath = *outPath + "_original." + suffix;
+        QFile::remove(originalFilePath);
+        if(QFile::copy(*inputPath, originalFilePath))
+        {
+            *originalFile = originalFilePath;
+        }
+        else
+        {
+            setText("ERROR: Unable to\ncopy original file\nto temp directory");
+        }
+
         // CREATE TGA THUMBNAIL
         QString program = "channel_shuffle \"" + *outPath + "_preview.tga\" \"" + *outPath + "_thumbnail.tga\" -width 128 -height 128 -r 1r -g 1g -b 1b -a 1a";
         QProcess *process = new QProcess(this);

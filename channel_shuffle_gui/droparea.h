@@ -16,6 +16,7 @@ public:
     DropArea(QWidget *parent = 0);
     QString *outPath;
     QString *originalFile;
+    QString *inputPath;
     int *activePreview;
     void dropEvent(QDropEvent *event) Q_DECL_OVERRIDE;
 
