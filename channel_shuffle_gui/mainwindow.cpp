@@ -6,33 +6,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     QString tempDir = QDir::tempPath() + "\\channel_shuffle\\";
-    QFile::remove(tempDir + "input_1_original.tga");
-    QFile::remove(tempDir + "input_1_original.bmp");
-    QFile::remove(tempDir + "input_1_original.dds");
-    QFile::remove(tempDir + "input_2_original.tga");
-    QFile::remove(tempDir + "input_2_original.bmp");
-    QFile::remove(tempDir + "input_2_original.dds");
-    QFile::remove(tempDir + "input_1_preview.tga");
-    QFile::remove(tempDir + "input_2_preview.tga");
-    QFile::remove(tempDir + "input_1_thumbnail.tga");
-    QFile::remove(tempDir + "input_1_thumbnail.bmp");
-    QFile::remove(tempDir + "input_1_thumbnail_r.bmp");
-    QFile::remove(tempDir + "input_1_thumbnail_g.bmp");
-    QFile::remove(tempDir + "input_1_thumbnail_b.bmp");
-    QFile::remove(tempDir + "input_1_thumbnail_a.bmp");
-    QFile::remove(tempDir + "input_2_thumbnail.tga");
-    QFile::remove(tempDir + "input_2_thumbnail.bmp");
-    QFile::remove(tempDir + "input_2_thumbnail_r.bmp");
-    QFile::remove(tempDir + "input_2_thumbnail_g.bmp");
-    QFile::remove(tempDir + "input_2_thumbnail_b.bmp");
-    QFile::remove(tempDir + "input_2_thumbnail_a.bmp");
-    QFile::remove(tempDir + "output_preview_r.bmp");
-    QFile::remove(tempDir + "output_preview_g.bmp");
-    QFile::remove(tempDir + "output_preview_b.bmp");
-    QFile::remove(tempDir + "output_preview_a.bmp");
-    QFile::remove(tempDir + "output_preview.bmp");
-    QFile::remove(tempDir + "output_preview.tga");
 
+    // CLEAN TEMP FOLDER
+    QDir dir = QDir(tempDir);
+    dir.setNameFilters(QStringList() << "*.*");
+    dir.setFilter(QDir::Files);
+    foreach(QString dirFile, dir.entryList())
+    {
+        dir.remove(dirFile);
+    }
 
     ui->setupUi(this);
 
