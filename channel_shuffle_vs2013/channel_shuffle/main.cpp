@@ -416,7 +416,15 @@ int main(int argc, char* argv[])
                     {
                         x2 = (k*x_ratio) >> 16;
                         y2 = (i*y_ratio) >> 16;
-						int right_side = from_channel_exists ? (from_image[y2*width[from_image_index] * channels[from_image_index] + from_channel + x2*channels[from_image_index]]) : 0;
+						int right_side;
+						if (from_channel_exists)
+						{
+							right_side = from_image[y2*width[from_image_index] * channels[from_image_index] + from_channel + x2*channels[from_image_index]];
+						}
+						else
+						{
+							right_side = to_channel == COL_ALPHA ? 255 : 0;
+						}
 						image[2][i*width[2] * channels[2] + k*channels[2] + to_channel] = abs(invert*255 - right_side);
                     }
                 }
